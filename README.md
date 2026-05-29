@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# Portfólio | Pedro Henrique Rocha Gonçalves
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio profissional desenvolvido para apresentar minha atuação como Desenvolvedor Backend Java, com foco em Java, Spring Boot, APIs REST, integrações, SQL, microsserviços e projetos próprios.
 
-Currently, two official plugins are available:
+O projeto foi construído com uma interface moderna, responsiva e objetiva, priorizando boa experiência de navegação, performance, acessibilidade básica e organização de código.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sobre
 
-## React Compiler
+Este portfólio reúne informações profissionais, stack técnica, experiências, projetos e canais de contato.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Principais destaques:
 
-## Expanding the ESLint configuration
+- Perfil focado em Backend Java e ecossistema Spring
+- Experiência com ERP Sankhya, integrações, sustentação e SQL
+- Projetos próprios com arquitetura backend moderna
+- Layout dark moderno com detalhes em purple
+- Design responsivo para desktop, tablet e mobile
+- Animações discretas com Framer Motion
+- Dados editáveis em arquivos separados
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- Vite
+- Styled Components
+- Framer Motion
+- React Icons
+- ESLint
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Seções
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Hero com apresentação, status profissional e stack principal
+- Sobre mim
+- Diferenciais profissionais
+- Skills por categoria
+- Projetos
+- Experiência profissional
+- Contato
+
+## Projetos em Destaque
+
+### EasyPay — Carteira Digital para Eventos
+
+Produto próprio privado desenvolvido para eventos, com carteira digital por participante, recarga via Pix, pagamentos com saldo, histórico de transações, autenticação JWT, controle de acesso por perfis e integração com Mercado Pago/Webhooks.
+
+### NotifyHub — Plataforma de Notificações
+
+Projeto baseado em microsserviços para envio e gerenciamento de notificações, com foco em arquitetura distribuída, mensageria com RabbitMQ, segurança, observabilidade, CI/CD e deploy em cloud.
+
+## Estrutura
+
+```txt
+src/
+  components/       Componentes reutilizáveis da interface
+  data/             Conteúdos editáveis do portfólio
+  styles/           Tema e estilos globais
+  App.tsx           Composição principal da aplicação
+  main.tsx          Entrada da aplicação
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Arquivos importantes:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `src/data/profile.ts`: dados pessoais, contatos, skills e diferenciais
+- `src/data/projects.ts`: projetos exibidos no portfólio
+- `src/data/experiences.ts`: experiências profissionais
+- `src/styles/theme.ts`: paleta e tokens visuais
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Como Executar
+
+Clone o repositório e instale as dependências:
+
+```bash
+npm install
 ```
+
+Execute em ambiente de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Gere a build de produção:
+
+```bash
+npm run build
+```
+
+Execute o lint:
+
+```bash
+npm run lint
+```
+
+Pré-visualize a build:
+
+```bash
+npm run preview
+```
+
+## Contato
+
+- LinkedIn: [linkedin.com/in/pedrohrocha16](https://www.linkedin.com/in/pedrohrocha16/)
+- GitHub: [github.com/pedrohrocha18](https://github.com/pedrohrocha18)
+- Email: [phr.tech@outlook.com](mailto:phr.tech@outlook.com)
+
+## Licença
+
+Este projeto é de uso pessoal e foi desenvolvido como portfólio profissional.
