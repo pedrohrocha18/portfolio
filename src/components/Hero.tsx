@@ -17,12 +17,18 @@ const HeroShell = styled.section`
   gap: clamp(48px, 6vw, 82px);
 
   @media (max-width: 900px) {
+    width: min(100% - 40px, 760px);
     grid-template-columns: 1fr;
-    padding: 56px 0 44px;
+    gap: 30px;
+    padding: 48px 0 42px;
   }
 
   @media (max-width: 768px) {
     width: min(100% - 28px, 1120px);
+  }
+
+  @media (max-width: 560px) {
+    padding: 40px 0 34px;
   }
 `
 
@@ -41,6 +47,12 @@ const Eyebrow = styled.p`
   background: rgba(21, 19, 34, 0.76);
   font-size: 0.86rem;
   font-weight: 800;
+
+  @media (max-width: 560px) {
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
 `
 
 const Title = styled.h1`
@@ -49,6 +61,17 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.ink};
   font-size: clamp(2.55rem, 4.7vw, 4.35rem);
   line-height: 1;
+
+  @media (max-width: 900px) {
+    max-width: 14ch;
+    font-size: clamp(2.55rem, 7vw, 3.8rem);
+  }
+
+  @media (max-width: 560px) {
+    max-width: 13ch;
+    font-size: clamp(2.25rem, 10vw, 2.85rem);
+    line-height: 1.05;
+  }
 `
 
 const Role = styled.span`
@@ -58,6 +81,15 @@ const Role = styled.span`
   color: ${({ theme }) => theme.colors.primary};
   font-size: clamp(1.45rem, 2.8vw, 2.45rem);
   line-height: 1.08;
+
+  @media (max-width: 900px) {
+    margin-top: 14px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+
+  @media (max-width: 560px) {
+    font-size: clamp(1.28rem, 6vw, 1.55rem);
+  }
 `
 
 const Intro = styled.p`
@@ -66,6 +98,12 @@ const Intro = styled.p`
   color: ${({ theme }) => theme.colors.muted};
   font-size: clamp(1rem, 1.4vw, 1.12rem);
   line-height: 1.7;
+
+  @media (max-width: 560px) {
+    margin-top: 18px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
 `
 
 const StatusBar = styled.div`
@@ -73,6 +111,11 @@ const StatusBar = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 22px;
+
+  @media (max-width: 560px) {
+    display: grid;
+    gap: 8px;
+  }
 `
 
 const StatusItem = styled.span`
@@ -92,6 +135,14 @@ const StatusItem = styled.span`
     width: 15px;
     height: 15px;
   }
+
+  @media (max-width: 560px) {
+    width: fit-content;
+    max-width: 100%;
+    min-height: 32px;
+    padding: 0 10px;
+    font-size: 0.78rem;
+  }
 `
 
 const Actions = styled.div`
@@ -99,6 +150,13 @@ const Actions = styled.div`
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
+
+  @media (max-width: 560px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 280px;
+  }
 `
 
 const Button = styled.a<{ $variant?: 'primary' | 'secondary' }>`
@@ -124,6 +182,11 @@ const Button = styled.a<{ $variant?: 'primary' | 'secondary' }>`
   &:hover {
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
   }
+
+  @media (max-width: 560px) {
+    width: 100%;
+    min-height: 52px;
+  }
 `
 
 const Stats = styled.div`
@@ -134,6 +197,8 @@ const Stats = styled.div`
 
   @media (max-width: 560px) {
     grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 28px;
   }
 `
 
@@ -142,6 +207,10 @@ const Stat = styled.div`
   border-radius: 8px;
   padding: 16px;
   background: rgba(21, 19, 34, 0.78);
+
+  @media (max-width: 560px) {
+    padding: 13px 14px;
+  }
 `
 
 const StatValue = styled.strong`
@@ -166,6 +235,14 @@ const Visual = styled(motion.div)`
     linear-gradient(145deg, rgba(28, 24, 45, 0.94), rgba(19, 15, 32, 0.84)),
     ${({ theme }) => theme.colors.surface};
   box-shadow: ${({ theme }) => theme.shadow.soft};
+
+  @media (max-width: 900px) {
+    padding: 18px;
+  }
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 `
 
 const CodeCard = styled.div`

@@ -141,7 +141,19 @@ export function Contact() {
   const [copied, setCopied] = useState(false)
 
   const copyEmail = async () => {
-    await navigator.clipboard.writeText(profile.email)
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(profile.email)
+    } else {
+      const textarea = document.createElement('textarea')
+      textarea.value = profile.email
+      textarea.style.position = 'fixed'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+    }
+
     setCopied(true)
     window.setTimeout(() => setCopied(false), 1800)
   }

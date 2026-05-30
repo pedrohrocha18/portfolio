@@ -1,5 +1,7 @@
 # Portfólio | Pedro Henrique Rocha Gonçalves
 
+![Preview do portfólio](public/og-image.png)
+
 Portfólio profissional desenvolvido para apresentar minha atuação como Desenvolvedor Backend Java, com foco em Java, Spring Boot, APIs REST, integrações, SQL, microsserviços e projetos próprios.
 
 O projeto foi construído com uma interface moderna, responsiva e objetiva, priorizando boa experiência de navegação, performance, acessibilidade básica e organização de código.

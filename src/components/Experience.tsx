@@ -189,9 +189,10 @@ export function Experience() {
             {profile.location}
           </Location>
           <p>
-            Experiência prática com desenvolvimento Java no ERP Sankhya, sustentação de sistemas,
-            integrações, SQL em bancos Oracle e SQL Server, suporte técnico e evolução de soluções
-            corporativas.
+            Experiência profissional com desenvolvimento Java no ERP Sankhya, sustentação de
+            sistemas, integrações e SQL em bancos Oracle e SQL Server. Em paralelo, desenvolvo
+            projetos próprios e soluções para clientes com Spring Boot, APIs REST, JWT, PostgreSQL,
+            Docker, microsserviços e arquitetura backend moderna.
           </p>
         </SummaryCard>
         <Timeline>

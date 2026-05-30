@@ -8,6 +8,7 @@ import {
   FaReact,
   FaWhatsapp,
 } from 'react-icons/fa'
+import { FiCode, FiDatabase, FiTool } from 'react-icons/fi'
 import {
   SiGit,
   SiJunit5,
@@ -20,6 +21,7 @@ import type { IconType } from 'react-icons'
 export type SkillCategory = {
   title: string
   items: string[]
+  icon: IconType
 }
 
 export type ContactLink = {
@@ -84,22 +86,27 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'Backend',
     items: ['Java 17', 'Spring Boot', 'Spring Security', 'JWT', 'APIs REST', 'Microsserviços'],
+    icon: FaJava,
   },
   {
     title: 'Banco de Dados',
     items: ['PostgreSQL', 'Modelagem relacional', 'SQL', 'Migrations'],
+    icon: FiDatabase,
   },
   {
     title: 'DevOps',
     items: ['Docker', 'AWS', 'RabbitMQ', 'Ambientes conteinerizados'],
+    icon: FaDocker,
   },
   {
     title: 'Frontend',
     items: ['React', 'TypeScript', 'Styled Components', 'Consumo de APIs'],
+    icon: FiCode,
   },
   {
     title: 'Ferramentas',
     items: ['Git', 'GitHub', 'JUnit', 'Mockito', 'Postman'],
+    icon: FiTool,
   },
 ]
 

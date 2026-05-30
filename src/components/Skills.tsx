@@ -27,13 +27,6 @@ const SkillCard = styled(motion.article)`
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 
-  h3 {
-    margin: 0 0 14px;
-    color: ${({ theme }) => theme.colors.ink};
-    font-size: 0.98rem;
-    letter-spacing: 0;
-  }
-
   &:hover {
     border-color: rgba(155, 92, 255, 0.58);
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
@@ -41,6 +34,26 @@ const SkillCard = styled(motion.article)`
 
   @media (max-width: 760px) {
     padding: 18px;
+  }
+`
+
+const SkillHeader = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  h3 {
+    margin: 0;
+    color: ${({ theme }) => theme.colors.ink};
+    font-size: 0.98rem;
+    letter-spacing: 0;
   }
 `
 
@@ -97,7 +110,10 @@ export function Skills() {
       description="Do desenho da API ao banco, segurança, testes, conteinerização e integração com interfaces modernas."
     >
       <SkillsGrid>
-        {skillCategories.map((category, index) => (
+        {skillCategories.map((category, index) => {
+          const Icon = category.icon
+
+          return (
           <SkillCard
             key={category.title}
             initial={{ opacity: 0, y: 18 }}
@@ -105,14 +121,18 @@ export function Skills() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.42, delay: index * 0.04 }}
           >
-            <h3>{category.title}</h3>
+            <SkillHeader>
+              <Icon aria-hidden />
+              <h3>{category.title}</h3>
+            </SkillHeader>
             <SkillList>
               {category.items.map((skill) => (
                 <Skill key={skill}>{skill}</Skill>
               ))}
             </SkillList>
           </SkillCard>
-        ))}
+          )
+        })}
       </SkillsGrid>
     </Section>
   )
