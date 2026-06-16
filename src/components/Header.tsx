@@ -209,8 +209,8 @@ export function Header() {
     <HeaderShell>
       <HeaderInner>
         <Brand href="#inicio" aria-label="Ir para o início">
-          <BrandMark>PR</BrandMark>
-          <BrandName>Pedro Henrique</BrandName>
+          <BrandMark>PH</BrandMark>
+          <BrandName>Pedro H.</BrandName>
         </Brand>
         <Nav aria-label="Navegação principal">
           {navItems.map((item) => (
